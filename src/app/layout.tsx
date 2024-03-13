@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Merriweather } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
+const merriweather = Merriweather({ weight: "700", subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Kendall",
@@ -16,7 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={merriweather.className}>{children}</body>
     </html>
   );
 }
